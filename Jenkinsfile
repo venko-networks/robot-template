@@ -18,9 +18,14 @@ pipeline {
             steps {
                 sh '''
                     . venv/bin/activate
-                    robot exemplo_teste.robot 
+                    robot exemplo_teste.robot
                 '''
             }
+        }
+    }
+    post {
+        always {
+            robot outputPath: '.', logFileName: 'log.html', outputFileName: 'output.xml', reportFileName: 'report.html', passThreshold: 100, unstableThreshold: 75.0
         }
     }
 }
