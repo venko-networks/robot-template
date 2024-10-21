@@ -1,23 +1,13 @@
 pipeline {
     agent { 
         node {
-            label 'jenkins-agent-python'
+            label 'jenkins-agent-robot'
         }
     }
     stages {
-        stage('Build') {
+        stage('Running-Tests') {
             steps {
                 sh '''
-                    python3 -m venv venv
-                    . venv/bin/activate
-                    pip install -r requirements.txt
-                '''
-            }
-        }
-        stage('Testes') {
-            steps {
-                sh '''
-                    . venv/bin/activate
                     robot exemplo_teste.robot
                 '''
             }
