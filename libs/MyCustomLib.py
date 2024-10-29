@@ -1,0 +1,1 @@
+# The purpose of the /lib folder is to gather .py files aimed at building custom keywords.

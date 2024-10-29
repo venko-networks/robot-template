@@ -8,7 +8,7 @@ pipeline {
         stage('Running-Tests') {
             steps {
                 sh '''
-                    robot exemplo_teste.robot
+                    robot tests/sample_test.robot
                 '''
             }
         }

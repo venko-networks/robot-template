@@ -1,6 +1,11 @@
+libs/__pycache__/
+libs/*/__pycache__/
 __pycache__/
 .DS_Store
 .venv
+venv/*
+.venv/*
+env/*
 log.html
 output.xml
 report.html
@@ -8,3 +13,4 @@ log/*
 logs/*
 report/*
 reports/*
+results/*
